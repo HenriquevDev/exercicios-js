@@ -1,21 +1,5 @@
-var dinheiro;
-const kilometrosLitro = 20;
-const ValorCombustivel = 5;
-
-function PegaValor(){
-dinheiro = parseInt(prompt("Digite o valor",""));
+function combustivel(){
+    let dinheiro = document.getElementById("dinheiro").value 
+    let combustivel = dinheiro / 5
+    document.getElementById("resposta").innerText = "você tera " + combustivel + " litro/s " + "e seu carro andara: " +combustivel*20+"km"
 }
-
-function CalculaCombustivel(n){
-let valor = n;
-return valor / ValorCombustivel;
-}
-
-function CalculaKilometragem(n){
-let QtdCombustivel = CalculaCombustivel(n);
-return QtdCombustivel * kilometrosLitro;
-}
-
-PegaValor();
-document.write("Voce abasteceu "+CalculaCombustivel(dinheiro)+" litros ");
-document.write("Sua autonomia 'e "+CalculaKilometragem(dinheiro)+" Kilometros ");
